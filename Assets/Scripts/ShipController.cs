@@ -28,7 +28,6 @@ public class ShipController : MonoBehaviour {
 		if (fly) {
 			endGame.Congrats ();
 			player.transform.Translate (Vector3.up* 3 * Time.deltaTime);
-			player.SetActive (false);
 			rescShip.transform.Translate (Vector3.forward * 3 * Time.deltaTime);
 		}
 	}

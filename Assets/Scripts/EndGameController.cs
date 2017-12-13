@@ -14,10 +14,6 @@ public class EndGameController : MonoBehaviour {
 
 	public void Congrats(){
 		rescueMsg.text = "You have been rescued !";
-		Invoke ("MenuBack", 3);
-	}
-
-	void MenuBack(){
 		endGame.enabled = true;
 	}
 }
