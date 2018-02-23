@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ShipController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/ShipController.cs" Line="31" Column="72" />
+      <File FileName="Assets/Scripts/PlayerHealthBar.cs" Line="9" Column="52" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="26" Column="56" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BoundaryControl.cs" Line="11" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

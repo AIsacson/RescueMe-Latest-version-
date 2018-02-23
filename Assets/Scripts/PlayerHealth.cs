@@ -14,12 +14,16 @@ public class PlayerHealth : MonoBehaviour {
 	bool isDead;
 	bool damaged;
 	GameOverMenuController gameOver;
+	GameObject healthPack;
+	GameObject cross;
 
 	void Awake(){
 		anim = GetComponent<Animator> ();
 		player = GetComponent<PlayerController> ();
 		currentHealth = startingHealth;
 		gameOver = FindObjectOfType<GameOverMenuController> ();
+		healthPack = GameObject.FindGameObjectWithTag ("HealthPack");
+		cross = healthPack.transform.GetChild (0).gameObject;
 	}
 
 	void Update () {
@@ -28,6 +32,16 @@ public class PlayerHealth : MonoBehaviour {
 		}
 		damaged = false;
 		anim.SetTrigger ("Recover");
+	}
+
+
+	void OnCollisionEnter(Collision other) {
+		if (other.collider.tag == "HealthPack") {
+			currentHealth = 100;
+			onHealthChanged (currentHealth);
+			Destroy (healthPack);
+			Destroy (cross);
+		}
 	}
 
 	public void TakeDamage(int amount){

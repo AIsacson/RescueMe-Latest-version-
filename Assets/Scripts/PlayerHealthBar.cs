@@ -6,6 +6,7 @@ public class PlayerHealthBar : MonoBehaviour {
 	
 	public Slider healthBar;
 	public Image fill;
+	Color fullHealth = new Color32 (79, 184, 70, 255);
 	Color mediumHealth = Color.yellow;
 	Color lowHealth = Color.red;
 
@@ -21,6 +22,10 @@ public class PlayerHealthBar : MonoBehaviour {
 
 	void HandleHealthChange(int currentHealth){
 		healthBar.value = currentHealth;
+
+		if (currentHealth == 100) {
+			fill.color = fullHealth;
+		}
 
 		if (currentHealth == 50) {
 			fill.color = mediumHealth;
